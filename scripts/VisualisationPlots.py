@@ -70,7 +70,3 @@ class VisualiseDf:
         plt.yticks( fontsize=14)
         plt.show()
 
-    
-
-    
-    
