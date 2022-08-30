@@ -70,7 +70,4 @@ class HypothesisPlot:
 
         plt.xlabel('d')
         plt.ylabel('PDF')
-        plt.show()
-        
-        
-        
+

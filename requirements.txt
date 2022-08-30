@@ -1,0 +1,4 @@
+scipy.stats
+matplotlib.pyplot
+numpy
+pandas
