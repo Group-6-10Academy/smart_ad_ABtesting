@@ -33,3 +33,6 @@ class DataInfo:
         null_size = (self.df.isnull().sum()).sum()
         percentage = round((null_size / df_size) * 100, 2)
         print(f"Dataframe contains null values of { percentage }% out of the given dataset")
+    # counts null
+    def get_count_null(self):
+        print(self.df.isnull().sum())
