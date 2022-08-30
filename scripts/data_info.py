@@ -4,6 +4,7 @@ import pandas as pd
 class DataInfo:
     def __init__(self, df):
         self.df = df.copy()
+
     # shape of the dataframe
     def shape_df(self):
          '''
@@ -11,7 +12,7 @@ class DataInfo:
          '''
          print(f"Dataframe contains {self.df.shape[0]} rows and {self.df.shape[1]} columns")
          #return (self.df.shape[0],self.df.shape[1])
-     # info
+    # info
     def detail_info(self):
         '''
         Display detail Dataframe info
@@ -22,7 +23,7 @@ class DataInfo:
         '''
         Display the statistical description of the given dataframe
         '''
-        print(self.df.describe()) 
+        return self.df.describe()
     # null percentage 
     def null_percentage(self):
         '''
@@ -36,3 +37,14 @@ class DataInfo:
     # counts null
     def get_count_null(self):
         print(self.df.isnull().sum())
+    
+    # duplication
+    def get_duplication(self):
+        print(self.duplicated().sum())
+        
+    # datatyps
+    def get_tyep(self):
+        print(self.dtype)
+
+
+

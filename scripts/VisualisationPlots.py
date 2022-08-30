@@ -9,6 +9,8 @@ import matplotlib.pyplot as plt
 
 
 class VisualiseDf:
+    def __init__(self, df):
+        self.df = df.copy()
 
     # plots a histogram
     # parameters: dataframe, column title, color (of hist)
