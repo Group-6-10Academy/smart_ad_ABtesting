@@ -1,4 +1,4 @@
-scipy.stats
+scipy
 matplotlib.pyplot
 numpy
 pandas
