@@ -9,7 +9,7 @@ sys.path.append(os.path.abspath(os.path.join('scripts')))
 from data_Preprocess import CleanDataFrame
 from data_info import DataInfo
 
-df = pd.DataFrame({'numbers': [2,4,6,8,9], 'letters':['a','b','c','d','e'],
+df = pd.DataFrame({'numbers': [2,4,6,7,9], 'letters':['a','b','c','d','e'],
                    'floats': [0.2323, -0.23123,np.NaN, np.NaN, 4.3434]})
 
 class Tester(unittest.TestCase):
