@@ -9,4 +9,4 @@ plotly==5.10.0
 #plotly.express
 #plotly.graph_objects
 #plotly.subplots
-sklearn.preprocessing
+sklearn==0.0
