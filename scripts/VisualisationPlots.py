@@ -15,8 +15,8 @@ class VisualiseDf:
     # plots a histogram
     # parameters: dataframe, column title, color (of hist)
     # returns: histogram plot (in the color green by default)
-    def plot_hist(self, df:pd.DataFrame, column:str, color:str='green')->None:
-        sns.distplot(data=df, x=column, color=color, kde=True, height=5, aspect=2)
+    def plot_hist(df:pd.DataFrame, column:str, color:str)->None:
+        sns.displot(data=df, x=column, color=color, kde=True, height=5, aspect=2)
         plt.title(f'Distribution of {column}', size=20, fontweight='bold')
         plt.show()
 
@@ -70,6 +70,12 @@ class VisualiseDf:
         plt.title(title, size=20)
         plt.xticks(fontsize=14)
         plt.yticks( fontsize=14)
+        plt.show()
+        
+    def plot_count(df: pd.DataFrame, column: str) -> None:
+        plt.figure(figsize=(12, 7))
+        sns.countplot(data=df, x=column)
+        plt.title(f'Distribution of {column}', size=20, fontweight='bold')
         plt.show()
 
     
