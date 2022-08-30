@@ -1,7 +1,11 @@
-mport pandas as pd
+import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler, StandardScaler, Normalizer
+
 class CleanDataFrame:
+    
+    def __init__(self, df: pd.DataFrame) -> None:
+        self.df = df
 
     @staticmethod
     def get_numerical_columns(df: pd.DataFrame) -> list:
@@ -117,9 +121,15 @@ class CleanDataFrame:
         This checkes if there are any duplicated entries for a user
         And remove the duplicated rows
         """
-        df = df.drop_duplicates(subset='auction_id')
+        #df = df.drop_duplicates(subset='auction_id')
+        #return df
+        """
+        Returns a DataFrame where duplicate rows are removed
+        """
+        rem_index = self.df[self.df.duplicated()].index
+        return self.df.drop(index=rem_index, inplace=True)
 
-        return df
+        
 
     def date_to_day(self, df: pd.DataFrame) -> pd.DataFrame:
         """
