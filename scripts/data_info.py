@@ -23,3 +23,13 @@ class DataInfo:
         Display the statistical description of the given dataframe
         '''
         print(self.df.describe()) 
+    # null percentage 
+    def null_percentage(self):
+        '''
+        Display Total Null percentage of the Data Frame
+        '''
+        number_of_rows, number_of_columns = self.df.shape
+        df_size = number_of_rows * number_of_columns
+        null_size = (self.df.isnull().sum()).sum()
+        percentage = round((null_size / df_size) * 100, 2)
+        print(f"Dataframe contains null values of { percentage }% out of the given dataset")
