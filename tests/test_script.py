@@ -29,7 +29,7 @@ class Tester(unittest.TestCase):
         
     def test_list_column_names(self):
         data = CleanDataFrame(df)
-        self.assertEqual(data.df.isna().sum().sum() !=0)
+        self.assertTrue(data.df.isna().sum().sum() !=0)
         
 if __name__ == '__main__':
     unittest.main() 
