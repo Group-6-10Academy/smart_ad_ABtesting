@@ -18,3 +18,8 @@ class DataInfo:
         '''
         print(self.df.info())
     # satistical description
+    def describe_stat(self):
+        '''
+        Display the statistical description of the given dataframe
+        '''
+        print(self.df.describe()) 
