@@ -2,7 +2,11 @@ import sys
 sys.path.insert(0, '/AB_Testing')
 
 import numpy as np
+import pandas as pd
 import scipy.stats as scs
+import seaborn as sns
+import matplotlib.pyplot as plt
+
 
 from ABTestingFunctions import ABTesting
 ABT = ABTesting()

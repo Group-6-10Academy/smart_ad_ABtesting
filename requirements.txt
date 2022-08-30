@@ -2,3 +2,7 @@ scipy.stats
 matplotlib.pyplot
 numpy
 pandas
+seaborn
+plotly.express
+plotly.graph_objects
+plotly.subplots
