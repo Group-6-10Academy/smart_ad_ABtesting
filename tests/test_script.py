@@ -28,7 +28,7 @@ class Tester(unittest.TestCase):
         self.assertEqual(data.df.info(),df.info())
         
     def test_list_column_names(self):
-        data = data_preProcess(df)
+        data = CleanDataFrame(df)
         self.assertEqual(data.df.isna().sum().sum() !=0)
         
 if __name__ == '__main__':
