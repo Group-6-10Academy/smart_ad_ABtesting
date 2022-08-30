@@ -127,11 +127,3 @@ class PlottingFunctions:
             ax.text(-1 * stderr, null.pdf(0),
                     'beta = {0:.3f}'.format(alternative.cdf(right)),
                     fontsize=12, ha='right', color='k')
-
-    # plots a histogram
-    # parameters: dataframe, column
-    # returns: a histogram plot (in the color cornflowerblue)
-    def hist(self, df:pd.DataFrame, column:str, color:str='cornflowerblue')->None:
-        sns.displot(data=df, x=column, color=color, kde=True, height=6, aspect=2)
-        plt.title(f'Distribution of {column}', size=20, fontweight='bold')
-        plt.show()
