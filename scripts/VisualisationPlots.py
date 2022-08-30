@@ -15,6 +15,8 @@ class VisualiseDf:
     # returns: histogram plot (in the color green by default)
     def plot_hist(self, df:pd.DataFrame, column:str, color:str='cornflowerblue')->None:
         sns.displot(data=df, x=column, color=color, kde=True, height=5, aspect=2)
+        plt.xticks(rotation=75, fontsize=14)
+        plt.yticks( fontsize=14)
         plt.title(f'Distribution of {column}', size=20, fontweight='bold')
         plt.show()
 
