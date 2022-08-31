@@ -1,4 +1,3 @@
-
 import sys
 sys.path.insert(0, '/AB_Testing')
 
@@ -15,8 +14,14 @@ class VisualiseDf:
     # plots a histogram
     # parameters: dataframe, column title, color (of hist)
     # returns: histogram plot (in the color green by default)
+    def plot_hist(self, df:pd.DataFrame, column:str, color:str='cornflowerblue')->None:
+        sns.displot(data=df, x=column, color=color, kde=True, height=5, aspect=2)
+        plt.xticks(rotation=75, fontsize=14)
+        # plt.yticks( fontsize=14)
+
     def plot_hist(df:pd.DataFrame, column:str, color:str)->None:
         sns.displot(data=df, x=column, color=color, kde=True, height=5, aspect=2)
+# >>>>>>> 9f2ddda94590d9255fbd63b0b6008634772ff986
         plt.title(f'Distribution of {column}', size=20, fontweight='bold')
         plt.show()
 
@@ -68,7 +73,7 @@ class VisualiseDf:
         plt.figure(figsize=(12, 7))
         sns.scatterplot(data = df, x=x_col, y=y_col, hue=hue, style=style)
         plt.title(title, size=20)
-        plt.xticks(fontsize=14)
+        plt.xticks(rotation=75, fontsize=14)
         plt.yticks( fontsize=14)
         plt.show()
         
@@ -78,7 +83,3 @@ class VisualiseDf:
         plt.title(f'Distribution of {column}', size=20, fontweight='bold')
         plt.show()
 
-    
-
-    
-    
