@@ -23,6 +23,7 @@ class VisualiseDf:
         sns.displot(data=df, x=column, color=color, kde=True, height=5, aspect=2)
 # >>>>>>> 9f2ddda94590d9255fbd63b0b6008634772ff986
         plt.title(f'Distribution of {column}', size=20, fontweight='bold')
+        plt.xticks(rotation=75, fontsize=14)
         plt.show()
 
     # # plots the distribution from a histogram plot, where the data is ordered by hour
