@@ -1,5 +1,6 @@
 # Smart Ad Advertising Performance Measure 
 <image src="SMART-MARKETING-visual.png" alt ="smart"/> 
+
 ## Objective 
 The main objective of this project is to test if the ad increases intention of the brand awareness on the clients of the company. 
 ## Project Overview
