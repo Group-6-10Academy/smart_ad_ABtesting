@@ -1,5 +1,5 @@
-scipy
-matplotlib.pyplot
+#scipy
+#matplotlib.pyplot
 #scipy.stats
 scipy==1.5.0
 #matplotlib.pyplot
