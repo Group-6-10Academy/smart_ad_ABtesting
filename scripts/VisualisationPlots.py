@@ -55,7 +55,7 @@ class VisualiseDf:
     # plots a box plot
     # parameters: dataframe, dependent col, title of box plot
     # returns: a box plot
-    def plot_box(self, df:pd.DataFrame, x_col:str, title:str) -> None:
+    def plot_box(df:pd.DataFrame, x_col:str, title:str) -> None:
         plt.figure(figsize=(12, 7))
         sns.boxplot(data = df, x=x_col)
         plt.title(title, size=20)
