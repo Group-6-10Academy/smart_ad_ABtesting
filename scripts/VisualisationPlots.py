@@ -84,3 +84,11 @@ class VisualiseDf:
         plt.title(f'Distribution of {column}', size=20, fontweight='bold')
         plt.show()
 
+    def plot_violin(df, x_col:str, y_col:str, hue:str, inner:str):
+        # Draw a nested violinplot and split the violins for easier comparison
+
+        sns.violinplot(data=df, x=x_col, y=y_col, hue=x_col,
+                    split=True, inner=y_col, linewidth=1,
+                    palette={"Yes": "b", "No": ".85"})
+        sns.despine(left=True)
+
