@@ -11,7 +11,8 @@ class VisualiseDf:
     def __init__(self, df):
         self.df = df.copy()
 
-    # plots a histogram
+    # plots a distribution (frequency of a variable)
+    # better results on continuous variables (not so much on continuous variables)
     # parameters: dataframe, column title, color (of hist)
     # returns: histogram plot (in the color green by default)
     def plot_hist(self, df:pd.DataFrame, column:str, color:str='cornflowerblue')->None:
@@ -77,15 +78,19 @@ class VisualiseDf:
         plt.xticks(rotation=75, fontsize=14)
         plt.yticks( fontsize=14)
         plt.show()
-        
+
+   # plots a distribution (frequency of a variable)
+    # better results on discrete variables e.g categorical variables
+    # parameters: dataframe, column title
+    # returns: histogram count plot 
     def plot_count(df: pd.DataFrame, column: str) -> None:
         plt.figure(figsize=(12, 7))
         sns.countplot(data=df, x=column)
         plt.title(f'Distribution of {column}', size=20, fontweight='bold')
         plt.show()
 
+    # Draw a nested violinplot and split the violins for easier comparison
     def plot_violin(df, x_col:str, y_col:str, hue:str, inner:str):
-        # Draw a nested violinplot and split the violins for easier comparison
 
         sns.violinplot(data=df, x=x_col, y=y_col, hue=x_col,
                     split=True, inner=y_col, linewidth=1,
