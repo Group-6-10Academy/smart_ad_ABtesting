@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 scipy
 matplotlib.pyplot
-=======
-#cipy.stats
+#scipy.stats
 scipy==1.5.0
-#atplotlib.pyplot
+#matplotlib.pyplot
 matplotlib==3.2.2
->>>>>>> 9f2ddda94590d9255fbd63b0b6008634772ff986
 numpy
 pandas==1.0.5
 seaborn==0.11.1
