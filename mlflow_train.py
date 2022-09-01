@@ -7,7 +7,7 @@ from sklearn.metrics import mean_squared_error , mean_absolute_error , r2_score
 from sklearn.model_selection import train_test_split
 from sklearn import ElasticNet
 from urllib.parse import urlparse
-import mlflow 
+import mlflow
 #import mlflow.sklearn
 import logging
 import warnings
@@ -18,7 +18,7 @@ logger= logging.getLogger (__name__ )
 #Get url from DVC
 import dvc.api
 
-path = "data /AdSmartABdata_clean.csv"
+path = "data /AdSmartABdata.csv"
 repo = 'C:/Users/Ekubay/Documents/smart_ad_ABtesting'
 version - 'v1'
 data_url = dvc.api.get_url (
