@@ -11,7 +11,8 @@ class VisualiseDf:
     def __init__(self, df):
         self.df = df.copy()
 
-    # plots a histogram
+    # plots a distribution (frequency of a variable)
+    # better results on continuous variables (not so much on continuous variables)
     # parameters: dataframe, column title, color (of hist)
     # returns: histogram plot (in the color green by default)
     def plot_hist(self, df:pd.DataFrame, column:str, color:str='cornflowerblue')->None:
@@ -23,6 +24,7 @@ class VisualiseDf:
         sns.displot(data=df, x=column, color=color, kde=True, height=5, aspect=2)
 # >>>>>>> 9f2ddda94590d9255fbd63b0b6008634772ff986
         plt.title(f'Distribution of {column}', size=20, fontweight='bold')
+        plt.xticks(rotation=75, fontsize=14)
         plt.show()
 
     # # plots the distribution from a histogram plot, where the data is ordered by hour
@@ -53,7 +55,7 @@ class VisualiseDf:
     # plots a box plot
     # parameters: dataframe, dependent col, title of box plot
     # returns: a box plot
-    def plot_box(self, df:pd.DataFrame, x_col:str, title:str) -> None:
+    def plot_box(df:pd.DataFrame, x_col:str, title:str) -> None:
         plt.figure(figsize=(12, 7))
         sns.boxplot(data = df, x=x_col)
         plt.title(title, size=20)
@@ -76,10 +78,22 @@ class VisualiseDf:
         plt.xticks(rotation=75, fontsize=14)
         plt.yticks( fontsize=14)
         plt.show()
-        
+
+   # plots a distribution (frequency of a variable)
+    # better results on discrete variables e.g categorical variables
+    # parameters: dataframe, column title
+    # returns: histogram count plot 
     def plot_count(df: pd.DataFrame, column: str) -> None:
         plt.figure(figsize=(12, 7))
         sns.countplot(data=df, x=column)
         plt.title(f'Distribution of {column}', size=20, fontweight='bold')
         plt.show()
+
+    # Draw a nested violinplot and split the violins for easier comparison
+    def plot_violin(df, x_col:str, y_col:str, hue:str, inner:str):
+
+        sns.violinplot(data=df, x=x_col, y=y_col, hue=x_col,
+                    split=True, inner=y_col, linewidth=1,
+                    palette={"Yes": "b", "No": ".85"})
+        sns.despine(left=True)
 
