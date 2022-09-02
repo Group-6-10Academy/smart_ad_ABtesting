@@ -2,5 +2,4 @@
     remote = mlstore
 ['remote "dvc-remote"']
     url = /tmp/dvc-storage
-['remote "mlstore"']
-    url = gdrive://1Vpfb7O3jR58fdgKPVEtTbAwLTuol4Ijm
+
