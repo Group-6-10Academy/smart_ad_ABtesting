@@ -1,7 +1,0 @@
-[core]
-    remote = myremote
-    autostage = true
-['remote "dvc-remote"']
-    url = /tmp/dvc-storage
-['remote "myremote"']
-    url = https://github.com/Amanuel3065/smart_ad_ABtesting/data
