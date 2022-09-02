@@ -1,6 +1,6 @@
 # Smart Ad Advertising Performance Measure 
 <p align="center">
-  <img src="SMART-MARKETING-visual.png" width="350" alt="smart">
+  <img src="dataOLD/SMART-MARKETING-visual.png" width="350" alt="smart">
 </p>
 
 ## Objective 
