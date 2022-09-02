@@ -1,4 +1,6 @@
 [core]
-    remote = dvc-remote
+    remote = myremotee
 ['remote "dvc-remote"']
     url = /tmp/dvc-storage
+['remote "myremotee"']
+    url = C:/Users/PC/AppData/Local/Temp/dvc_storage
