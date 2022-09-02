@@ -1,6 +1,6 @@
 import sys
 import os
-from ensurepip import version
+#from ensurepip import version
 import pandas as pd
 import numpy as np
 from sklearn.metrics import mean_squared_error , mean_absolute_error , r2_score
@@ -20,9 +20,9 @@ import dvc.api
 
 path = 'data/AdSmartABdata.csv'
 repo = 'C:/Users/Ekubay/Documents/smart_ad_ABtesting'
-version = 'v3'
+version = 'v4'
 data_url = dvc.api.get_url (
- path = path ,
+ path = path,
  repo = repo,
  rev= version
 )
@@ -45,14 +45,15 @@ mlflow.log_param ( ' data version ' , version )
 mlflow.log_param ( ' input_rows ' , data.shape [0] )
 mlflow.log_param ( ' input_cols ' , data.shape [ 1 ])
 
-
+# checking
+#print(data['response'])
 # Split the data into training and test sets . ( 0.75 , 0.25 ) split .
 train , test = train_test_split( data )
 #The predicted column is " response " which is a scalar from 13 , 91
-train_x = train.drop ( [ "response" ] , axis = 1 )
-test_x= test.drop ( [ " response "] , axis = 1)
-train_y= train [[ " response "]]
-test_y = test [[ " response " ]]
+train_x = train.drop(["response"], axis = 1)
+test_x= test.drop(["response"], axis = 1)
+train_y= train[["response"]]
+test_y = test[["response"]]
 
 #Log artifacts : columns used for modeling
 cols_x = pd . DataFrame ( list ( train_x.columns ) )
