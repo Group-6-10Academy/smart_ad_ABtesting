@@ -1,0 +1,9 @@
+<<<<<<< HEAD
+# Add patterns of files dvc should ignore, which could improve
+# the performance. Learn more at
+# https://dvc.org/doc/user-guide/dvcignore
+=======
+# Add patterns of files dvc should ignore, which could improve
+# the performance. Learn more at
+# https://dvc.org/doc/user-guide/dvcignore
+>>>>>>> b65b57dc5d3180ff0ea5f43af0c473a0badc0a59
