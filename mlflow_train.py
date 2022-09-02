@@ -12,6 +12,9 @@ import mlflow
 import logging
 import warnings
 
+# 
+sys.path.append(os.path.abspath(os.path.join('..')))
+
 logging.basicConfig (level = logging .WARN )
 logger= logging.getLogger (__name__ )
 
@@ -20,7 +23,7 @@ import dvc.api
 
 path = 'data/AdSmartABdata.csv'
 repo = 'C:/Users/Ekubay/Documents/smart_ad_ABtesting'
-version = 'v4'
+version = 'v5'
 data_url = dvc.api.get_url (
  path = path,
  repo = repo,
@@ -68,3 +71,9 @@ alpha = float ( sys.argv [ 1 ] ) if len ( sys.argv ) > 1 else 0.5
 l1_ratio = float ( sys.argv [ 2 ] ) if len ( sys.argv ) > 2 else 0.5
 lr = ElasticNet(alpha = alpha , l1_ratio = l1_ratio , random_state = 42 )
 lr.fit ( train_x , train_y )
+
+# # Write scores to a file
+# with open("metrics.txt", 'w') as outfile:
+#         outfile.write("an_absolute_error: %2.1f%%\n" % rnse)
+#         outfile.write("r2_score: %2.1f%%\n" %r2)
+        
