@@ -18,9 +18,9 @@ logger= logging.getLogger (__name__ )
 #Get url from DVC
 import dvc.api
 
-path = "data/AdSmartABdata.csv"
+path = 'data/AdSmartABdata.csv'
 repo = 'C:/Users/Ekubay/Documents/smart_ad_ABtesting'
-version - 'v3'
+version = 'v3'
 data_url = dvc.api.get_url (
  path = path ,
  repo = repo,
