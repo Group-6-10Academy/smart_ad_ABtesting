@@ -1,4 +1,0 @@
-[core]
-    remote = myremote
-['remote "myremote"']
-    url = gdrive://1Vpfb7O3jR58fdgKPVEtTbAwLTuol4Ijm/smartAdData
