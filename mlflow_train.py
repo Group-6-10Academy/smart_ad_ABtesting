@@ -35,8 +35,8 @@ def eval_metrics ( actual , pred ) :
 
 # main 
 if __name__ == "__main__":
-    warnings.filterwarnings ( " ignore " )
-    np.random.seed ( 40 )
+    warnings.filterwarnings("ignore")
+    np.random.seed(40)
 # Read the samrt ad from the remote repository
 data = pd . read_csv ( data_url , sep = " , " )
 # Log data params
