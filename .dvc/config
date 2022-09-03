@@ -1,4 +1,6 @@
 [core]
-    remote = dvc-remote
+    remote = mldata
 ['remote "dvc-remote"']
     url = /tmp/dvc-storage
+['remote "mldata"']
+    url = gdrive://1Vpfb7O3jR58fdgKPVEtTbAwLTuol4Ijm
