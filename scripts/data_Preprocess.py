@@ -157,6 +157,11 @@ class CleanDataFrame:
         df.drop(columns=columns, inplace=True)
 
         return df
+    
+    def convert_to_datetime(self) -> pd.DataFrame:
+        self.df['date'] = pd.to_datetime(
+            self.df['date'], errors='coerce')
+        return self.df
 
     def merge_response_columns(self, df: pd.DataFrame) -> pd.DataFrame:
         """
