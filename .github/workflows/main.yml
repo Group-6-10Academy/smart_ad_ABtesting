@@ -21,7 +21,7 @@ jobs:
       - name: Install requirements
         run: pip install -r requirements.txt
       # TODO: test go here
-      - name: Run
-        run: python -m unittest tests/test.py
+     # - name: Run
+     #   run: python -m unittest tests/test.py
       # TODO: test end here
       - run: echo "🍏 This job's status is ${{ job.status }}."
