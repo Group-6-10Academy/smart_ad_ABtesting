@@ -3,7 +3,7 @@ import unittest
 import numpy as np
 import pandas as pd
 
-sys.path.insert(0, '../sctiprs/')
+sys.path.insert(0, '../scripts/')
 sys.path.append(os.path.abspath(os.path.join('scripts')))
 
 from data_Preprocess import CleanDataFrame
