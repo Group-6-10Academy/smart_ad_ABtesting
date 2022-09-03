@@ -21,3 +21,9 @@ SmartAd is a mobile first advertiser agency. It designs intuitive touch-enabled 
 - Hyperparameter tuning
 - Model comparison & selection
 - Experiment analysis
+
+# INSTALLATION
+* git clone https://github.com/Group-6-10Academy/smart_ad_ABtesting.git
+* cd smart_ad_ABtesting
+* pip install -r requirements.txt
+
