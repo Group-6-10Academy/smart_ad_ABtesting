@@ -13,7 +13,7 @@ SmartAd is a mobile first advertiser agency. It designs intuitive touch-enabled 
 - ML algorithms Logistic regression, Decision Trees, XGBoost
 - Model management (building ML catalog contains model feature labels and training model version)
 - MLOps  with DVC, CML, and MLFlow
-## Knowledge gained form the project 
+## Knowledge gained from the project 
 - Reasoning with business context
 - Data exploration
 - Hypothesis testing
